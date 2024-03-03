@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form penjadwalan pertemuan</title>
+</head>
+<body>
+    <h1>Form Penjadwalan Pertemuan</h1>
+    <div class="box">
+    <form>
+        <b>Informasi Pribadi</b><br><br>
+        <label for="nama">Nama</label>
+        <input type="text" name="nama" id="nama"><br><br>
+        
+        <label for="telp">No. Telepon</label>
+        <input type="tel" name="telp" id="telp" pattern="^\d{2}-\d{3}-\d{4}$" required><br><br>
+
+        <label for="email">Alamat Email</label>
+        <input type="email" name="email" id="email" 
+        pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"><br><br>
+
+        <label for="tl">Tanggal Lahir</label>
+        <input type="date" name="tl" id="tl" min="1987-01-01" max="1993-01-01"><br><br>
+    </div>
+    <div class="box">
+            <b>Permintaan Pertemuan</b><br><br>
+            <label for="tujuan">Tujuan Pertemuan</label>
+            <input type="text" name="tujuan" id="tujuan"><br><br>
+
+            <label for="tingkat">Tingkat Kepentingan Pertemuan</label>
+            <input type="range" name="tingkat" id="tingkat" 
+            min="0" max="10"><br><br>
+
+            <label for="tgl">Tanggal</label>
+            <input type="date" name="tgl" id="tgl"><br><br>
+
+            <label for="waktu">Waktu</label>
+            <input type="time" name="waktu" id="waktu" min="17:00" max="21:00"><br><br>
+        </div>
+            <input type="submit" name="submit" id="submit" style="position: absolute; ">
+        </form>
+
+</body>
+</html>
+
+<style>
+    .box {
+        border: 2px solid #ccc;
+        padding: 10px;
+        margin: 10px;
+        width: 35%;
+        text-align: justify;
+    }
+</style>
